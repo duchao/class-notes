@@ -110,7 +110,7 @@
 **方法一：特征组合**
 
 <div  align="center">
-<img src="imgs/步骤5-4种优化的模型.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<img src="imgs/步骤5-4种优化的模型.png" width = 85% height = 85% alt="Oops..." align="center"/>
 <p> 图12 4种优化的模型-特征组合</p>
 </div>
 <br>
@@ -123,7 +123,7 @@
 在提取新特征之前，除了领域知识，另一个有效的方法是在数据上进行探索性分析，即**EDA**，图13为一个示例。
 
 <div  align="center">
-<img src="imgs/步骤6-2-特征工程-数据分析型.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<img src="imgs/步骤6-2-特征工程-数据分析.png" width = 65% height = 65% alt="Oops..." align="center"/>
 <p> 图13 隐含特征分析</p>
 </div>
 <br>
