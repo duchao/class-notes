@@ -131,7 +131,7 @@
 图14展示了提取图13中特征的具体流程：
 
 <div  align="center">
-<img src="imgs/步骤6-特征工程.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<img src="imgs/步骤6-特征工程.png" width = 85% height = 85% alt="Oops..." align="center"/>
 <p> 图14 特征工程</p>
 </div>
 <br>
@@ -156,6 +156,6 @@
 
 <div  align="center">
 <img src="imgs/步骤7-2-正则化-评价指标.png" width = 65% height = 65% alt="Oops..." align="center"/>
-<p> 图17 添加正则项</p>
+<p> 图17 正则项对模型的影响</p>
 </div>
 <br>
