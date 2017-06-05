@@ -106,5 +106,56 @@
 
 #### 4.1 提升训练集模型效果
 在不更改模型的情况下，可通过一定的数据预处理与寻找更多的有效特征来提升模型的训练效果，俗称**特征工程**。
+
+**方法一：特征组合**
+
+<div  align="center">
+<img src="imgs/步骤5-4种优化的模型.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<p> 图12 4种优化的模型-特征组合</p>
+</div>
+<br>
+
+由图12可知，特征组合可能会导致模型过拟合。
+
+
+**方法二：提取新特征**
+
+在提取新特征之前，除了领域知识，另一个有效的方法是在数据上进行探索性分析，即**EDA**，图13为一个示例。
+
+<div  align="center">
+<img src="imgs/步骤6-2-特征工程-数据分析型.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<p> 图13 隐含特征分析</p>
+</div>
+<br>
+
+图14展示了提取图13中特征的具体流程：
+
+<div  align="center">
+<img src="imgs/步骤6-特征工程.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<p> 图14 特征工程</p>
+</div>
+<br>
+
+添加新特征后，模型的效果评价如图15所示，模型预测性能获得提升。
+
+<div  align="center">
+<img src="imgs/步骤6-5-特征工程-评价指标.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<p> 图15 特征工程</p>
+</div>
+<br>
+
 #### 4.2 避免过拟合
-过拟合的原因是模型过于复杂，一种有效避免模型过拟合的办法是添加**正则项**。
+
+过拟合的原因是模型过于复杂，一种有效避免模型过拟合的办法是添加**正则项**，如图17所示。
+
+<div  align="center">
+<img src="imgs/步骤7-1-正则化-特征选择-弄清楚为什么要正则化-bais不需要进行正则.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<p> 图16 添加正则项</p>
+</div>
+<br>
+
+<div  align="center">
+<img src="imgs/步骤7-2-正则化-评价指标.png" width = 65% height = 65% alt="Oops..." align="center"/>
+<p> 图17 添加正则项</p>
+</div>
+<br>
