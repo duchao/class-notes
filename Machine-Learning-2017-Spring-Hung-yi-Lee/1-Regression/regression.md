@@ -1,6 +1,6 @@
-### Regression
+## Regression
 
 > 机器学习**三步骤**
-<div  align="center"><img src="imgs/1-framework-and-examples.png" alt="1.1" align="center" /></div><br>
+<div  align="center"><img src="imgs/1-framework-and-examples.png" alt="1.1" align="center" /></div>
 
 ---
