@@ -6,13 +6,13 @@
 `Tensorboard`是一个用于可视化复杂tensorflow模型计算流程的web组件，图1为在`Graph`中添加该模块的示例。
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/0-1-add-tensorboard.png" alt="Oops..." align="center" />
 <p>图1 添加Tensorboard</p>
 </div>
 <br>
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/0-2-run.png" alt="Oops..." align="center" />
 <p>图2 进入Tensorboard界面</p>
 </div>
 <br>
@@ -32,7 +32,7 @@
 具体使用方法参见[API](https://www.tensorflow.org/api_guides/python/math_ops)。
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/3-1-数学运算.png" alt="Oops..." align="center" />
 <p>图3 数学运算分类</p>
 </div>
 <br>
@@ -44,7 +44,7 @@
 参见[API](https://www.tensorflow.org/versions/r0.11/resources/dims_types)
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/4-1-数据类型.png" alt="Oops..." align="center" />
 <p>图4 数据类型</p>
 </div>
 <br>
@@ -197,7 +197,7 @@ with g.control_dependencies([a, b, c]):
 ### 8 Placeholders and feed_dict
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/7-1-placeholder原型.png" alt="Oops..." align="center" />
 <p>图5 placeholder</p>
 </div>
 <br>
@@ -205,13 +205,13 @@ with g.control_dependencies([a, b, c]):
 顾名思义，`placeholder`的作用是**占位**，等到实际计算时，通过该占位符连接实际的数据。
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/7-2-placeholder实现.png" alt="Oops..." align="center" />
 <p>图6 placeholder的实现-一次将所有数据feed</p>
 </div>
 <br>
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/7-3-每次feed一个数.png" alt="Oops..." align="center" />
 <p>图7 placeholder的实现-每次feed一个数</p>
 </div>
 <br>
@@ -219,7 +219,7 @@ with g.control_dependencies([a, b, c]):
 另外，除了使用`placeholder`，其实任何feedable的tensor都可以使用feed_dict，如图8所示。
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/7-4-不通过placeholder也可以feed数据.png" alt="Oops..." align="center" />
 <p>图8 另一种feed数据的方法</p>
 </div>
 <br>
@@ -260,13 +260,13 @@ with tf.Session() as sess:
 两者之间的区别在于生成的图的结构，分别如图9、图10所示：
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/8-1-normal-loading.png" alt="Oops..." align="center" />
 <p>图9 normal loading图结构</p>
 </div>
 <br>
 
 <div  align="center">
-<img src="imgs/0-1-tf-workflow-建图-执行.png" alt="Oops..." align="center" />
+<img src="imgs/8-2-lazy-loading.png" alt="Oops..." align="center" />
 <p>图10 lazy loading图结构</p>
 </div>
 <br>
