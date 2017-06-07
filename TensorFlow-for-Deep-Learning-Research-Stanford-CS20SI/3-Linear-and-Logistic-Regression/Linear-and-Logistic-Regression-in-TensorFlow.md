@@ -105,8 +105,9 @@ with tf.Session() as sess:
 **模型优化**
 
 - 优化器对比
-  ```shell
-  # GradientDescentOptimizer(learning_rate=0.01)
+  
+```python
+  # GradientDescentOptimizer(learning_rate=0.01)
   Epoch 0: 1.33212877126e+22
   Epoch 1: inf
   Epoch 2: inf
@@ -154,6 +155,7 @@ with tf.Session() as sess:
   Epoch 99: 507.461766403
   weights: 1.50052940845, bias: 2.71419858932
   ```
+
 
   对比可知，`AdamOptimizer`比`GradientDescentOptimizer`效果要好。另外当`GradientDescentOptimizer(learning_rate=0.01)`时，因`learning_rate`设置过大，损失值为`inf`，导致模型未能训练成功。
 
