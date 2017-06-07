@@ -175,5 +175,12 @@ with tf.Session() as sess:
 
 ### 2 Logistic Regression
 
+`Logistic Regression`与`Linear Regression`的建模步骤类似，区别仅在于损失函数与模型，如图9所示。
 
+
+<div  align="center">
+<img src="imgs/2-1-多分类的logistic-regression模型.png" alt="Oops..." align="center" />
+<p>图9 多分类Logistic Regression 模型与损失函数</p>
+</div>
+<br>
 
