@@ -29,3 +29,81 @@
 <img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
 <p>图2 算法分析应用</p>
 </div>
+
+
+### 2 观察
+
+**观察**方法主要分为两步：通过足够的实验记录数据并结规律；然后利用规律对未知输入大小时算法的性能进行预测，分别如图3与图4所示。
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图3 规律总结</p>
+</div>
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图4 预测</p>
+</div>
+
+**观察**法直观且易理解，图5展示了**观察**法的优缺点。
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图5 优缺点分析</p>
+</div>
+
+### 3 数学模型
+
+Knuth指出一个程序的运行总时间主要与两点有关：
+
+- 执行每条语句的耗时
+- 执行每条语句的频率
+
+前者取决于计算机、Java编辑器和操作系统，后者取决于程序本身算法和输入，如图6所示。
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图6 运行时长的数学模型</p>
+</div>
+
+图7以1-sum为例进行分析：
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图7 1-sum运行时长分析</p>
+</div>
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图8 简化时长的数学模型</p>
+</div>
+
+
+### 4 增长数量级
+
+为算法建立时长数学模型的意义在于提供了一种可靠的办法比较不同算法间的性能差异。事实上，时长数学模型使得这个比较过程更为简单，因为常见的算法时长模型都可以归纳为图9所示的几个类别中。
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图8 简化时长的数学模型</p>
+</div>
+
+图9展示了增长数量级类别与实例的对应关系：
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图9 类别与实例的对应关系</p>
+</div>
+
+下面以二分查找为例，对其增长数量级进行分析，如图10与图11所示：
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图10 二分查找代码实现</p>
+</div>
+
+<div  align="center">
+<img src="imgs/1-1-读取数据.png" alt="Oops..." align="center" />
+<p>图11 二分查找算法性能分析</p>
+</div>
+
