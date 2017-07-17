@@ -81,7 +81,7 @@
 </div>
 <br>
 
-图7解释了假设训练样本服从高斯分布的原因：对新样本的概率进行预测。
+图7解释了假设训练样本服从高斯分布的原因：**对新样本的概率进行预测**。
 
 <div  align="center">
 <center>
@@ -91,3 +91,122 @@
 </div>
 <br>
 
+那么问题就在于如何通过这些训练数据，确定其所服从的高斯分布，即确定高斯分布的参数。
+这里使用的参数估计方法为**最大似然估计**，参考[链接](https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1)，如图8所示：
+
+> 概率分布：  
+> 概率密度函数：
+
+<div  align="center">
+<center>
+<img src="imgs/1-6 maximum likehood计算高斯分布参数.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图8 最大似然参数估计</p>
+</center>
+</div>
+
+图9是最大似然的计算过程：
+
+<div  align="center">
+<center>
+<img src="imgs/1-7 计算过程-.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图9 最大似然参数计算过程</p>
+</center>
+</div>
+
+在模型实际过程中，会对每个类别上的训练数据进行一次参数估计，如图10所示：
+
+<div  align="center">
+<center>
+<img src="imgs/1-8 数据集上计算结果.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图10 分类别进行参数估计</p>
+</center>
+</div>
+
+完成上述计算后，即可对新数据进行分类预测，如图11所示：
+
+<div  align="center">
+<center>
+<img src="imgs/1-9 用于实际分类.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图11 实际分类模型</p>
+</center>
+</div>
+
+分类结果如图12所示，分类准确率为47%：
+
+<div  align="center">
+<center>
+<img src="imgs/1-10 实际结果研究.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图12 实际分类结果</p>
+</center>
+</div>
+
+#### 模型优化
+
+如图13所示，使两组训练数据的`covariance matrix`相同：
+
+<div  align="center">
+<center>
+<img src="imgs/2-1 模型优化-减少参数.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图13 模型优化思路</p>
+</center>
+</div>
+
+新模型的参数估计如图14所示：
+
+<div  align="center">
+<center>
+<img src="imgs/2-2 新模型计算参数.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图14 新模型参数估计</p>
+</center>
+</div>
+
+新模型的预测结果如图15所示，准确率提升到73%：
+
+<div  align="center">
+<center>
+<img src="imgs/2-3 新模型预测结果.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图15 新模型预测结果</p>
+</center>
+</div>
+
+### 2 总结
+
+概率模型解决问题的3个步骤如图16所示：
+
+<div  align="center">
+<center>
+<img src="imgs/3-1 总结-回顾模型的三个步骤.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图16 概率模型三步骤</p>
+</center>
+</div>
+
+在上一节中，计算`p(x|c)`比较复杂，需要假设数据服从某一种分布，然后根据样本进行参数估计。现在考虑一种特殊情况，即假设特征间互相独立，如图17所示，那么`p(x|c)`的计算将变得很简单：
+
+<div  align="center">
+<center>
+<img src="imgs/3-2 模型假设分布的讨论-不同的数据集可以假设不同的分布.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图17 概率模型三步骤</p>
+</center>
+</div>
+
+此时模型称为`naive bayes分类器`，该模型在文本数据分类中用的尤其多。
+
+下面对分类模型换个角度进行分析，如图18所示：
+
+<div  align="center">
+<center>
+<img src="imgs/3-3 后验概率-引出logistics regression.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图18 后验概率深入分析</p>
+</center>
+</div>
+
+经过一番理论推导过后，可得到图19所示的结论：
+
+<div  align="center">
+<center>
+<img src="imgs/3-4 先求出分布的参数在求出w和b-引出如何直接求w和b的问题.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图19 结论</p>
+</center>
+</div>
+
+如图19所示，在概率模型中，计算出所需参数后可得到参数`w`和`b`，那么有没有一种通过训练样本直接计算`w`和`b`呢？
