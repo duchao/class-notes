@@ -151,7 +151,7 @@
 </div>
 <br>
 
-### Discriminative v.s. Generative
+### 4 Discriminative v.s. Generative
 
 图14总结了`Discriminative`与`Generative`两种模型间的参数估计过程：
 
@@ -159,6 +159,122 @@
 <center>
 <img src="imgs/4-1 Discriminative v.s. Generative的计算过程区别.png" width = 65% height = 65% alt="Oops..." align="center" />
 <p>图14 使`Discriminative`与`Generative`模型比较</p>
+</center>
+</div>
+<br>
+
+两种模型的预测结果如图15所示，可知，`Discriminative`模型的预测结果稍好：
+
+<div  align="center">
+<center>
+<img src="imgs/4-1-1 Discriminative v.s. Generative的计算结果.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图15 使`Discriminative`与`Generative`模型预测结果比较</p>
+</center>
+</div>
+<br>
+
+图16展示了一种类别不平衡时的预测问题：
+
+<div  align="center">
+<center>
+<img src="imgs/4-2 类别不均衡时generative model的计算过程.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图16 Generative模型处理类别不平衡问题</p>
+</center>
+</div>
+<br>
+
+而`Discriminative`模型在处理类别不平衡问题时，需要对训练数据进行采样。
+
+图17对`Discriminative`与`Generative`模型进行比较，`Discriminative`模型的预测结果一般比`Generative`模型要好，而`Generative`模型主要有两个优势：**允许使用更少的训练数据**和**对数据中噪声鲁棒性较好**。
+
+<div  align="center">
+<center>
+<img src="imgs/4-3 generative model的优势-数据量少时-噪声大时.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图17 `Discriminative`与`Generative`模型比较结论</p>
+</center>
+</div>
+<br>
+
+### 5 多分类问题
+
+以上讨论均为二分类问题，多分类问题的分析过程也类似，只不过最后再添加一个`softmax`层，如图18所示：
+
+<div  align="center">
+<center>
+<img src="imgs/5-1 多目标分类定义-softmax函数.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图18 softmax</p>
+</center>
+</div>
+<br>
+
+图19是一个多分类问题示例：
+
+<div  align="center">
+<center>
+<img src="imgs/5-2 多分类模型实例.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图19 多分类问题示例</p>
+</center>
+</div>
+<br>
+
+### 6 `logistic regression`模型的局限性
+
+图20模拟了一种场景，此时`logistic regression`模型无法将其正确分类：
+
+<div  align="center">
+<center>
+<img src="imgs/6-1 logistic regression的局限.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图20 不能正确分类的场景</p>
+</center>
+</div>
+<br>
+
+此时，为了提高模型预测的准确率，有两种途径进行改良，1）寻找更多的特征或在原始特征上进行特征组合变换；2）使用新模型。 
+
+图21展示了一种特征变换方法，进行特征变换后，该问题可通过`logistic regression`模型进行解决。需要注意的是，特征变换需要大量的领域知识。
+
+<div  align="center">
+<center>
+<img src="imgs/6-2 特征转换的意义.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图21 特征变换</p>
+</center>
+</div>
+<br>
+
+图22从新模型的角度出发，将两个`logistic regression`模型进行叠加：
+
+<div  align="center">
+<center>
+<img src="imgs/6-3 logistic模型叠加.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图22 模型叠加</p>
+</center>
+</div>
+<br>
+
+可知，特征变换不再需要领域知识，而是通过模型叠加实现，其计算过程如图23、24所示：
+
+<div  align="center">
+<center>
+<img src="imgs/66-4 初始化w后计算结果.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图23 参数初始化</p>
+</center>
+</div>
+<br>
+
+<div  align="center">
+<center>
+<img src="imgs/6-5 转化后问题变得线性可分.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图24 模型叠加后分类结果</p>
+</center>
+</div>
+<br>
+
+而模型的叠加，参数共同学习的思路正是深度学习（神经网络）的思路，如图25所示：
+
+<div  align="center">
+<center>
+<img src="imgs/6-6 引出深度学习.png" width = 65% height = 65% alt="Oops..." align="center" />
+<p>图25 logistics regression 到 deep learning</p>
 </center>
 </div>
 <br>
