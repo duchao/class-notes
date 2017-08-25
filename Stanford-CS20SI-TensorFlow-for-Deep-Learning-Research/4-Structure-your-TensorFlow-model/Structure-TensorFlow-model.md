@@ -1,6 +1,5 @@
 ## Structure your TensorFlow model
 
----
 
 ### 1. TensorFlow模型结构
 
