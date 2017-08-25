@@ -27,14 +27,14 @@
   - softmax-based
   - sample-based
   
-tensorflow实现的word2vec网络结构如图所示：
+tensorflow实现的word2vec网络结构如图3所示：
   
 <div  align="center">
 <img src="imgs/2-1-w2v-tf.png" alt="Oops..." align="center" />
 <p>图3 word2vec的网络结构</p>
 </div>
   
-  另外，可通过`name scope`对网络结构进行整理，`name scope`的介绍如图所示，整理后的网络结构如图所示。
+  另外，可通过`name scope`对网络结构进行整理，`name scope`的介绍如图4所示，整理后的网络结构如图5所示。
   
   
 <div  align="center">
