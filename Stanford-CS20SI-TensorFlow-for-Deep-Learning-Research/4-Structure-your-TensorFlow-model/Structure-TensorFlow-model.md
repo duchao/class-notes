@@ -43,6 +43,6 @@ tensorflow实现的word2vec网络结构如图3所示：
 </div>
 
 <div  align="center">
-<img src="imgs/12-3-w2v-with-name-scope.png" alt="Oops..." align="center" />
+<img src="imgs/2-3-w2v-with-name-scope.png" alt="Oops..." align="center" />
 <p>图5 整理后的网络结构</p>
 </div>
