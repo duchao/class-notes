@@ -21,3 +21,29 @@
 > `Word Embedding`: Capture the semantic relationships between words. 
 获取字/词间的语义关系。
 
+`Word Embedding`的实现方法有以下几种：
+
+- CBOW
+- skip-gram
+  - softmax-based
+  - sample-based
+  
+tensorflow实现的word2vec网络结构如图所示：
+  
+<div  align="center">
+<img src="imgs/2-1-w2v-tf.png" alt="Oops..." align="center" />
+<p>图3 word2vec的网络结构</p>
+</div>
+  
+  另外，可通过`name scope`对网络结构进行整理，`name scope`的介绍如图所示，整理后的网络结构如图所示。
+  
+  
+<div  align="center">
+<img src="imgs/2-2-name-scope.png" alt="Oops..." align="center" />
+<p>图4 name scope</p>
+</div>
+
+<div  align="center">
+<img src="imgs/12-3-w2v-with-name-scope.png" alt="Oops..." align="center" />
+<p>图5 整理后的网络结构</p>
+</div>
